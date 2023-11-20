@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Cek Kepribadian Berdasarkan Golongan Darah</h2>
+        <label for="golonganDarah">Apa golongan darah kamu? (A, B, AB, O)</label>
+        <input type="text" id="golonganDarah">
+        <button onclick="cekKepribadian()">Cek Kepribadian</button>
+        <p id="hasil"></p>
+    </div>
+
+    <script>
+        function cekKepribadian() {
+    // Ambil nilai golongan darah dari input
+    var golonganDarah = document.getElementById("golonganDarah").value.toUpperCase();
+
+
+    var hasil = "";
+
+    switch (golonganDarah) {
+        case 'A':
+            hasil = "Golongan darah A memiliki kepercayaan hampir tentang segala hal, sehingga mereka bisa menjalin komunikasi dengan siapa pun.";
+            break;
+        case 'B':
+            hasil = "Semangat yang tinggi, aktif, kreatif, dan selalu ingin tahu.";
+            break;
+        case 'AB':
+            hasil = "Golongan darah AB adalah satu dari 4 jenis golongan darah, dan diklaim menjadi golongan darah dengan pemilik paling sedikit.";
+            break;
+        case 'O':
+            hasil = "Sikapnya mudah beradaptasi dengan lingkungan baru atau easy-going.";
+            break;
+        default:
+            hasil = "Golongan darah tidak valid. Silakan masukkan A, B, AB, atau O.";
+    }
+
+    document.getElementById("hasil").innerHTML = hasil;
+}
+    </script>
+
+<form action="index.html">
+    <button type="submit">
+        kembali
+    </button>
+</form>
+
+</body>
+</html>

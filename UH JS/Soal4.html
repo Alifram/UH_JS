@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Perulangan Lagu Anak Ayam</h2>
+
+<button onclick="laguAnakAyam()">Mulai Lagu</button>
+
+<p id="lagu"></p>
+
+<script>
+function laguAnakAyam() {
+  var jumlahAyam = 10;
+  var lagu = "";
+  
+  for (var i = jumlahAyam; i > 0; i--) {
+    if (i > 1) {
+      lagu += "Anak ayam turun " + i + ", mati satu tinggal " + (i-1) + "<br>";
+    } else {
+      lagu += "Anak ayam turun " + i + ", mati satu tinggal induknya" + "<br>";
+    }
+  }
+  
+  document.getElementById("lagu").innerHTML = lagu;
+}
+</script>
+
+<form action="index.html">
+    <button type="submit">
+        kembali
+    </button>
+</form>
+
+</body>
+</html>
